@@ -1,0 +1,224 @@
+.heroWrapper {
+  position: relative;
+  width: 100vw;
+  height: 50vh;
+}
+
+
+.imageWrapper {
+  z-index: -1;
+}
+
+
+.heroContent {
+  position: relative;
+  
+  align-items: center; 
+  background-color: white;
+}
+
+@font-face {
+  font-family: 'Montserrat', sans-serif !important;
+  src: url('/eshop/public/fonts/Montserrat-Italic-VariableFont_wght.ttf') format("truetype") !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+}
+
+
+.levitate {
+  animation: levitate 3s infinite ease-in-out;
+ margin-top: 50px;
+
+}
+
+@keyframes levitate {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.banner{
+  justify-content: space-around;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  /* background-color: rgba(247, 240, 240, 0.507); */
+  opacity: 21;
+}
+
+.navspace{
+  margin-top: 500px;
+  padding: 0px;
+}
+
+.slogan{
+  margin-top: 300px;
+ 
+}
+
+.mybtn1{
+  position: relative;
+
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-top: 300px;
+}
+
+
+
+.mybtn1:hover {
+  box-shadow: 0 0 5px 2px #fff; /* add a white box shadow on hover */
+  transition: box-shadow 0.3s ease-in-out; /* add a transition to the box shadow */
+}
+
+.mybtn2{
+  padding: 10px;
+}
+.mybtn2:hover{
+
+  box-shadow: 0 0 5px 2px #fff; /* add a white box shadow on hover */
+  transition: box-shadow 0.3s ease-in-out; /* add a transition to the box shadow */
+}
+
+@media only screen and (max-width: 768px) {
+  .hero-content p {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .hero-content p {
+    font-size: 14px;
+  }
+}
+/* About Section responsivenese code */
+
+.title {
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+}
+
+.text {
+  font-family: Montserrat, sans-serif;
+  font-weight: 100;
+  font-size: 1rem;
+  text-align: justify;
+  line-height: 1.5;
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 3rem;
+  }
+
+  .text {
+    font-size: 1.25rem;
+  }
+}
+
+
+/* mission Section responsiveness */
+.text-white {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 100;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (min-width: 576px) {
+  .text-white {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .text-white {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .text-white {
+    font-size: 1.75rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .text-white {
+    font-size: 2rem;
+  }
+}
+
+
+/* For screens smaller than 576px (extra small devices) */
+@media (max-width: 575.98px) {
+  .text-white {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+  .para {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+}
+
+/* For screens larger than 576px (small devices) */
+@media (min-width: 576px) {
+  .text-white {
+    font-size: 48px;
+    line-height: 1.2;
+  }
+  .para  {
+    font-size: 24px;
+    line-height: 1.4;
+  }
+}
+
+/* For screens larger than 768px (medium devices) */
+@media (min-width: 768px) {
+  .text-white {
+    font-size: 64px;
+    line-height: 1.2;
+  }
+  .para  {
+    font-size: 28px;
+    line-height: 1.5;
+  }
+}
+
+/* For screens larger than 992px (large devices) */
+@media (min-width: 992px) {
+  .text-white {
+    font-size: 80px;
+    line-height: 1.2;
+  }
+  .para {
+    font-size: 32px;
+    line-height: 1.5;
+  }
+}
+
+/* For screens larger than 1200px (extra large devices) */
+@media (min-width: 1200px) {
+  .text-white {
+    font-size: 96px;
+    line-height: 1.2;
+  }
+  .para {
+    font-size: 36px;
+    line-height: 1.5;
+  }
+}
