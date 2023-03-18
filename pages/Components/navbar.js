@@ -103,20 +103,21 @@ function navbar(props) {
           </Container>
         </Navbar>
       </div>
+      <div className="d-flex flex-column justify-content-center align-items-center">
+        <HeroSection />
+        <div ref={aboutRef}>
+          <AboutSection />
+        </div>
+        <div>
+          <Mission />
+          <Vision />
+        </div>
 
-      <HeroSection />
-      <div ref={aboutRef}>
-        <AboutSection />
+        <div ref={serviceRef}></div>
+        <Services />
+        <Workflow />
+        <Technologies />
       </div>
-      <div>
-        <Mission />
-        <Vision />
-      </div>
-
-      <div ref={serviceRef}></div>
-      <Services />
-      <Workflow />
-      <Technologies />
 
       <div ref={ContactRef}></div>
       <Footer />
