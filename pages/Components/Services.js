@@ -50,92 +50,79 @@ function Services() {
       >
         Our Services
       </h2>
-      <motion.div
-        ref={ref}
-        variants={variants}
-        initial="hidden"
-        animate={inView ? "visible" : "hidden"}
-      >
-        <div className="d-flex justify-content-evenly flex-wrap gap-3 pt-3">
-          {Service.map((item, index) => {
-            console.log(item);
-            return (
-              <Card
-                style={{ width: "18rem", backgroundColor: "#000000" }}
-                text="white"
-              >
-                <Card.Img
-                  variant="top"
-                  src={item.src}
-                  style={{ height: "200px", width: "100%", objectFit: "cover" }}
-                />
-                <Card.Body>
-                  <Card.Title
-                    style={{
-                      fontFamily: "Montserrat, sans-serif",
-                      fontWeight: 800,
-                    }}
-                  >
-                    {" "}
-                    {item.name}
-                  </Card.Title>
-                  <Card.Text
-                    style={{
-                      fontFamily: "Montserrat, sans-serif",
-                      fontWeight: 100,
-                    }}
-                  >
-                    {item.description}
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            );
-          })}
-        </div>
-      </motion.div>
 
-      <motion.div
-        ref={ref2}
-        variants={variants2}
-        initial="hidden"
-        animate={inView ? "visible" : "hidden"}
-      >
-        <div className="d-flex justify-content-evenly flex-wrap gap-3 pt-3">
-          {Service2.map((item, index) => {
-            console.log(item);
-            return (
-              <Card
-                style={{ width: "18rem", backgroundColor: "#000000" }}
-                text="white"
-              >
-                <Card.Img
-                  variant="top"
-                  src={item.src}
-                  style={{ height: "200px", width: "100%", objectFit: "cover" }}
-                />
-                <Card.Body>
-                  <Card.Title
-                    style={{
-                      fontFamily: "Montserrat, sans-serif",
-                      fontWeight: 800,
-                    }}
-                  >
-                    {item.name}
-                  </Card.Title>
-                  <Card.Text
-                    style={{
-                      fontFamily: "Montserrat, sans-serif",
-                      fontWeight: 100,
-                    }}
-                  >
-                    {item.description}
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            );
-          })}
-        </div>
-      </motion.div>
+      <div className="d-flex justify-content-evenly flex-wrap gap-3 pt-3">
+        {Service.map((item, index) => {
+          console.log(item);
+          return (
+            <Card
+              style={{ width: "18rem", backgroundColor: "#000000" }}
+              text="white"
+            >
+              <Card.Img
+                variant="top"
+                src={item.src}
+                style={{ height: "200px", width: "100%", objectFit: "cover" }}
+              />
+              <Card.Body>
+                <Card.Title
+                  style={{
+                    fontFamily: "Montserrat, sans-serif",
+                    fontWeight: 800,
+                  }}
+                >
+                  {" "}
+                  {item.name}
+                </Card.Title>
+                <Card.Text
+                  style={{
+                    fontFamily: "Montserrat, sans-serif",
+                    fontWeight: 100,
+                  }}
+                >
+                  {item.description}
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          );
+        })}
+      </div>
+
+      <div className="d-flex justify-content-evenly flex-wrap gap-3 pt-3">
+        {Service2.map((item, index) => {
+          console.log(item);
+          return (
+            <Card
+              style={{ width: "18rem", backgroundColor: "#000000" }}
+              text="white"
+            >
+              <Card.Img
+                variant="top"
+                src={item.src}
+                style={{ height: "200px", width: "100%", objectFit: "cover" }}
+              />
+              <Card.Body>
+                <Card.Title
+                  style={{
+                    fontFamily: "Montserrat, sans-serif",
+                    fontWeight: 800,
+                  }}
+                >
+                  {item.name}
+                </Card.Title>
+                <Card.Text
+                  style={{
+                    fontFamily: "Montserrat, sans-serif",
+                    fontWeight: 100,
+                  }}
+                >
+                  {item.description}
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          );
+        })}
+      </div>
     </Container>
   );
 }

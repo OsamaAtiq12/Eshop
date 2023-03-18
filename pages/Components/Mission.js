@@ -22,12 +22,7 @@ function Mission() {
   };
 
   return (
-    <motion.div
-      ref={ref}
-      variants={variants}
-      initial="hidden"
-      animate={inView ? "visible" : "hidden"}
-    >
+   
       <Container className="position-relative m-0 pb-5 pt-5">
         <h2
           className="text-white"
@@ -59,7 +54,7 @@ function Mission() {
           </p>
         </div>
       </Container>
-    </motion.div>
+  
   );
 }
 

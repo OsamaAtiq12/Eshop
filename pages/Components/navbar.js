@@ -14,12 +14,11 @@ import Services from "./Services";
 import Technologies from "./Technologies";
 import Workflow from "./Workflow";
 import Footer from "./Footer";
-import { useRouter } from 'next/router'
+import { useRouter } from "next/router";
 function navbar(props) {
-  const router = useRouter()
+  const router = useRouter();
   function handleClick() {
-    
-    router.push('/blog')
+    router.push("/blog");
   }
   const aboutRef = useRef(null);
   const handleAboutClick = () => {
@@ -29,15 +28,15 @@ function navbar(props) {
   };
   const serviceRef = useRef(null);
   const handleserviceClick = () => {
-    if (serviceRef .current) {
-      serviceRef .current.scrollIntoView({ behavior: "smooth" });
+    if (serviceRef.current) {
+      serviceRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   const ContactRef = useRef(null);
   const handleContactClick = () => {
-    if (ContactRef .current) {
-      ContactRef .current.scrollIntoView({ behavior: "smooth" });
+    if (ContactRef.current) {
+      ContactRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -73,15 +72,27 @@ function navbar(props) {
                 >
                   <Icon icon="mdi:about" fontSize={25} /> About us
                 </Nav.Link>
-                <Nav.Link href="#" className={styles.hover} onClick={handleserviceClick }>
+                <Nav.Link
+                  href="#"
+                  className={styles.hover}
+                  onClick={handleserviceClick}
+                >
                   <Icon icon="ic:baseline-medical-services" fontSize={25} />{" "}
                   Services
                 </Nav.Link>
-                <Nav.Link href="#" className={styles.hover} onClick={handleContactClick}>
+                <Nav.Link
+                  href="#"
+                  className={styles.hover}
+                  onClick={handleContactClick}
+                >
                   <Icon icon="material-symbols:phone-forwarded" fontSize={25} />{" "}
                   Contact Us
                 </Nav.Link>
-                <Nav.Link href="#" className={styles.hover} onClick={handleClick}>
+                <Nav.Link
+                  href="#"
+                  className={styles.hover}
+                  onClick={handleClick}
+                >
                   <Icon icon="jam:blogger" fontSize={25} /> Blog
                 </Nav.Link>
                 <Button size="sm" variant="dark" className={styles.mybtn}>
@@ -92,28 +103,23 @@ function navbar(props) {
           </Container>
         </Navbar>
       </div>
-      <div className="d-flex flex-column justify-content-center align-items-center">
-        <HeroSection />
-        <div ref={aboutRef}>
-        <AboutSection  />
-        </div>
-        <div>
+
+      <HeroSection />
+      <div ref={aboutRef}>
+        <AboutSection />
+      </div>
+      <div>
         <Mission />
         <Vision />
-        </div>
-        
-        <div ref={serviceRef}>
-        </div>
-        <Services />  
-        <Workflow />
-        <Technologies />
-   
       </div>
 
-      <div ref={ContactRef}>
+      <div ref={serviceRef}></div>
+      <Services />
+      <Workflow />
+      <Technologies />
 
-      </div>
-      <Footer/>
+      <div ref={ContactRef}></div>
+      <Footer />
     </>
   );
 }
