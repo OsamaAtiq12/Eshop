@@ -28,7 +28,7 @@ const HeroSection = ({ direction }) => {
       },
     },
   };
-  
+
   const handleButtonClick = () => {
     targetRef.current.scrollIntoView({ behavior: "smooth" });
   };
@@ -75,51 +75,45 @@ const HeroSection = ({ direction }) => {
         </Button>
       </div>
 
-      <motion.div
-        ref={ref}
-        variants={variants}
-        initial="hidden"
-        animate={inView ? "visible" : "hidden"}
-      >
-        <Container className={styles.navspace} ref={targetRef}>
-          <div className={styles.banner} >
-            <div className="d-flex align-items-center">
-              <h1
-                className="text-white"
-                style={{
-                  fontFamily: "Montserrat, sans-serif",
-                  fontWeight: 700,
-                  marginLeft:10
-                }}
+      <Container className={styles.navspace} ref={targetRef}>
+        <div className={styles.banner}>
+          <div className="d-flex align-items-center">
+            <h1
+              className="text-white"
+              style={{
+                fontFamily: "Montserrat, sans-serif",
+                fontWeight: 700,
+                marginLeft: 10,
+              }}
+            >
+              Better Solutions For Your <br /> Business
+              <p
+                className={styles.para}
+                style={{ fontSize: 24, marginTop: 20, fontWeight: 200 }}
               >
-                Better Solutions For Your <br /> Business
-                <p className={styles.para}  style={{ fontSize: 24, marginTop: 20, fontWeight: 200 }}>
-                  We help enterprises through <br /> custom business solutions
-                  and provide IT <br />
-                  outsourcing services to companies <br /> with agility,
-                  quality, and commitment.
-                </p>
-                <Button size="sm" variant="dark" className={styles.mybtn2}>
-                  Get a new business solution
-                </Button>
-              </h1>
-            </div>
-
-            <div>
-              <Image
-                className={styles.levitate}
-                src="/hero-img.png"
-                alt="My Image"
-                width={400}
-                height={500}
-                layout="responsive"
-              />
-            </div>
+                We help enterprises through <br /> custom business solutions and
+                provide IT <br />
+                outsourcing services to companies <br /> with agility, quality,
+                and commitment.
+              </p>
+              <Button size="sm" variant="dark" className={styles.mybtn2}>
+                Get a new business solution
+              </Button>
+            </h1>
           </div>
-        </Container>
-      </motion.div>
 
-     
+          <div>
+            <Image
+              className={styles.levitate}
+              src="/hero-img.png"
+              alt="My Image"
+              width={400}
+              height={500}
+              layout="responsive"
+            />
+          </div>
+        </div>
+      </Container>
     </>
   );
 };
