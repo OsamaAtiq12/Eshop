@@ -1,8 +1,8 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
-import { Service } from "./constants/service";
-import { Service2 } from "./constants/service";
+import { Service } from "../../constants/service";
+import { Service2 } from "../../constants/service";
 import styles from "../../styles/HeroSection.module.css";
 import Container from "react-bootstrap/Container";
 import { useInView } from "react-intersection-observer";
@@ -60,7 +60,10 @@ function Services() {
           {Service.map((item, index) => {
             console.log(item);
             return (
-              <Card style={{ width: "18rem" ,backgroundColor: '#000000'  }} text="white"  >
+              <Card
+                style={{ width: "18rem", backgroundColor: "#000000" }}
+                text="white"
+              >
                 <Card.Img
                   variant="top"
                   src={item.src}
@@ -68,21 +71,22 @@ function Services() {
                 />
                 <Card.Body>
                   <Card.Title
-                    
                     style={{
                       fontFamily: "Montserrat, sans-serif",
                       fontWeight: 800,
-                      
                     }}
                   >
                     {" "}
                     {item.name}
                   </Card.Title>
-                  <Card.Text  style={{
+                  <Card.Text
+                    style={{
                       fontFamily: "Montserrat, sans-serif",
                       fontWeight: 100,
-                      
-                    }}>{item.description}</Card.Text>
+                    }}
+                  >
+                    {item.description}
+                  </Card.Text>
                 </Card.Body>
               </Card>
             );
@@ -100,7 +104,10 @@ function Services() {
           {Service2.map((item, index) => {
             console.log(item);
             return (
-                <Card style={{ width: "18rem" ,backgroundColor: '#000000'  }} text="white"  >
+              <Card
+                style={{ width: "18rem", backgroundColor: "#000000" }}
+                text="white"
+              >
                 <Card.Img
                   variant="top"
                   src={item.src}
@@ -108,7 +115,6 @@ function Services() {
                 />
                 <Card.Body>
                   <Card.Title
-                    
                     style={{
                       fontFamily: "Montserrat, sans-serif",
                       fontWeight: 800,
@@ -116,11 +122,14 @@ function Services() {
                   >
                     {item.name}
                   </Card.Title>
-                  <Card.Text style={{
+                  <Card.Text
+                    style={{
                       fontFamily: "Montserrat, sans-serif",
                       fontWeight: 100,
-                      
-                    }}>{item.description}</Card.Text>
+                    }}
+                  >
+                    {item.description}
+                  </Card.Text>
                 </Card.Body>
               </Card>
             );

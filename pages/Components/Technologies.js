@@ -1,9 +1,9 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
-import { Technology } from "./constants/technologies";
-import { Technology2 } from "./constants/technologies";
-import { Technology3 } from "./constants/technologies";
+import { Technology } from "../../constants/technologies";
+import { Technology2 } from "../../constants/technologies";
+import { Technology3 } from "../../constants/technologies";
 
 import styles from "../../styles/HeroSection.module.css";
 import Container from "react-bootstrap/Container";
@@ -52,106 +52,115 @@ function Technologies() {
       >
         Our Technologies
       </h2>
-     
-        <div className="d-flex justify-content-evenly flex-wrap gap-3 pt-3">
-          {Technology.map((item, index) => {
-            console.log(item);
-            return (
-              <Card style={{ width: "18rem" ,backgroundColor: '#000000'  }} text="white"  >
-                <Card.Img
-                  variant="top"
-                  src={item.src}
-                  style={{ height: "200px", width: "100%", objectFit: "cover" }}
-                />
-                <Card.Body>
-                  <Card.Title
-                    
-                    style={{
-                      fontFamily: "Montserrat, sans-serif",
-                      fontWeight: 800,
-                      
-                    }}
-                  >
-                    {" "}
-                    {item.name}
-                  </Card.Title>
-                  <Card.Text  style={{
-                      fontFamily: "Montserrat, sans-serif",
-                      fontWeight: 100,
-                      
-                    }}>{item.description}</Card.Text>
-                </Card.Body>
-              </Card>
-            );
-          })}
-        </div>
-      
 
-     
-        <div className="d-flex justify-content-evenly flex-wrap gap-3 pt-3">
-          {Technology2.map((item, index) => {
-            console.log(item);
-            return (
-                <Card style={{ width: "18rem" ,backgroundColor: '#000000'  }} text="white"  >
-                <Card.Img
-                  variant="top"
-                  src={item.src}
-                  style={{ height: "200px", width: "100%", objectFit: "cover" }}
-                />
-                <Card.Body>
-                  <Card.Title
-                    
-                    style={{
-                      fontFamily: "Montserrat, sans-serif",
-                      fontWeight: 800,
-                    }}
-                  >
-                    {item.name}
-                  </Card.Title>
-                  <Card.Text style={{
-                      fontFamily: "Montserrat, sans-serif",
-                      fontWeight: 100,
-                      
-                    }}>{item.description}</Card.Text>
-                </Card.Body>
-              </Card>
-            );
-          })}
-        </div>
-     
+      <div className="d-flex justify-content-evenly flex-wrap gap-3 pt-3">
+        {Technology.map((item, index) => {
+          console.log(item);
+          return (
+            <Card
+              style={{ width: "18rem", backgroundColor: "#000000" }}
+              text="white"
+            >
+              <Card.Img
+                variant="top"
+                src={item.src}
+                style={{ height: "200px", width: "100%", objectFit: "cover" }}
+              />
+              <Card.Body>
+                <Card.Title
+                  style={{
+                    fontFamily: "Montserrat, sans-serif",
+                    fontWeight: 800,
+                  }}
+                >
+                  {" "}
+                  {item.name}
+                </Card.Title>
+                <Card.Text
+                  style={{
+                    fontFamily: "Montserrat, sans-serif",
+                    fontWeight: 100,
+                  }}
+                >
+                  {item.description}
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          );
+        })}
+      </div>
 
-      
-        <div className="d-flex justify-content-evenly flex-wrap gap-3 pt-3">
-          {Technology3.map((item, index) => {
-            console.log(item);
-            return (
-                <Card style={{ width: "18rem" ,backgroundColor: '#000000'  }} text="white"  >
-                <Card.Img
-                  variant="top"
-                  src={item.src}
-                  style={{ height: "200px", width: "100%", objectFit: "cover" }}
-                />
-                <Card.Body>
-                  <Card.Title
-                    
-                    style={{
-                      fontFamily: "Montserrat, sans-serif",
-                      fontWeight: 800,
-                    }}
-                  >
-                    {item.name}
-                  </Card.Title>
-                  <Card.Text style={{
-                      fontFamily: "Montserrat, sans-serif",
-                      fontWeight: 100,
-                      
-                    }}>{item.description}</Card.Text>
-                </Card.Body>
-              </Card>
-            );
-          })}
-        </div>
-      
+      <div className="d-flex justify-content-evenly flex-wrap gap-3 pt-3">
+        {Technology2.map((item, index) => {
+          console.log(item);
+          return (
+            <Card
+              style={{ width: "18rem", backgroundColor: "#000000" }}
+              text="white"
+            >
+              <Card.Img
+                variant="top"
+                src={item.src}
+                style={{ height: "200px", width: "100%", objectFit: "cover" }}
+              />
+              <Card.Body>
+                <Card.Title
+                  style={{
+                    fontFamily: "Montserrat, sans-serif",
+                    fontWeight: 800,
+                  }}
+                >
+                  {item.name}
+                </Card.Title>
+                <Card.Text
+                  style={{
+                    fontFamily: "Montserrat, sans-serif",
+                    fontWeight: 100,
+                  }}
+                >
+                  {item.description}
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          );
+        })}
+      </div>
+
+      <div className="d-flex justify-content-evenly flex-wrap gap-3 pt-3">
+        {Technology3.map((item, index) => {
+          console.log(item);
+          return (
+            <Card
+              style={{ width: "18rem", backgroundColor: "#000000" }}
+              text="white"
+            >
+              <Card.Img
+                variant="top"
+                src={item.src}
+                style={{ height: "200px", width: "100%", objectFit: "cover" }}
+              />
+              <Card.Body>
+                <Card.Title
+                  style={{
+                    fontFamily: "Montserrat, sans-serif",
+                    fontWeight: 800,
+                  }}
+                >
+                  {item.name}
+                </Card.Title>
+                <Card.Text
+                  style={{
+                    fontFamily: "Montserrat, sans-serif",
+                    fontWeight: 100,
+                  }}
+                >
+                  {item.description}
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          );
+        })}
+      </div>
     </Container>
   );
 }
